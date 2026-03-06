@@ -53,7 +53,7 @@ function ComboListScreen({ navigation, combos, onDelete }: any) {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.logoContainer}>
-        <Image source={require('Logo/ComboLab Logo.png')} style={styles.logo} />
+        <Image source={{ uri: 'https://i.imgur.com/eITNCGj.png' }} style={styles.logo} />
       </View>
       <TextInput
         style={styles.searchInput}
