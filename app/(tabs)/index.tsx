@@ -12,7 +12,7 @@ import {
   View,
 } from 'react-native';
 
-// Sample data to start with
+// Sample data
 const INITIAL_COMBOS = [
   {
     id: '1',
@@ -53,7 +53,6 @@ function ComboListScreen({ navigation, combos, onDelete }: any) {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.logoContainer}>
-        {/* Placeholder for Logo - replace URI with your own image */}
         <Image source={require('Logo/ComboLab Logo.png')} style={styles.logo} />
       </View>
       <TextInput
