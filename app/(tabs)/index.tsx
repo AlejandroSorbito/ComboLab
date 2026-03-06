@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import {
   Button,
   FlatList,
+  Image,
   SafeAreaView,
   StatusBar,
   StyleSheet,
@@ -51,6 +52,10 @@ function ComboListScreen({ navigation, combos, onDelete }: any) {
 
   return (
     <SafeAreaView style={styles.container}>
+      <View style={styles.logoContainer}>
+        {/* Placeholder for Logo - replace URI with your own image */}
+        <Image source={require('Logo/ComboLab Logo.png')} style={styles.logo} />
+      </View>
       <TextInput
         style={styles.searchInput}
         placeholder="Filter by game or character..."
@@ -99,7 +104,7 @@ function AddComboScreen({ navigation, route, onAdd, onEdit }: any) {
       <Text style={styles.label}>Combo</Text>
       <TextInput style={styles.input} value={combo} onChangeText={setCombo} placeholder="Enter notation..." multiline />
       
-      <Button title="Save Combo" onPress={handleSave} />
+      <Button title="Save Combo" onPress={handleSave} color="red" />
     </View>
   );
 }
@@ -195,5 +200,14 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     marginTop: 10,
     color: 'red',
+  },
+  logoContainer: {
+    alignItems: 'center',
+    marginVertical: 10,
+  },
+  logo: {
+    width: 100,
+    height: 100,
+    resizeMode: 'contain',
   },
 });
